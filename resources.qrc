@@ -2,4 +2,7 @@
     <qresource prefix="/osm" >
         <file alias="zoomin_icoon">afbeeldingen/zoomin_afbeelding.png</file>
     </qresource>
+	<qresource prefix="/osm" >
+        <file alias="osm_data">afbeeldingen/osm_map.png</file>
+    </qresource>
 </RCC>
