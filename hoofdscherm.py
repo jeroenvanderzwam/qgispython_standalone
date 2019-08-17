@@ -37,7 +37,9 @@ class Hoofdscherm(QMainWindow):
                 lagen.append(vlaag)
 
             self.map_canvas.setLayers( lagen + [rlaag])
-            self.map_canvas.zoomToFullExtent()
+
+        extent = lagen[0].extent()
+        self.map_canvas.setExtent(extent)
 
     def setupGui(self):
         frame = QFrame(self)
