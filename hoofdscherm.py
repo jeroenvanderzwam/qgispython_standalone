@@ -13,6 +13,7 @@ class Hoofdscherm(QMainWindow):
         QMainWindow.__init__(self)
         
         self.setupGui()
+
         self.project = QgsProject()
         urlWithParams = 'type=xyz&url=http://a.tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png&zmax=19&zmin=0&crs=EPSG3857'
         rlaag = QgsRasterLayer(urlWithParams, 'OpenStreetMap', 'wms')
@@ -43,7 +44,10 @@ class Hoofdscherm(QMainWindow):
 
     def setupGui(self):
         frame = QFrame(self)
+        frame.setMinimumSize(1400, 800)
+
         self.setCentralWidget(frame)
+        
         self.grid_layout = QGridLayout(frame)
 
         self.map_canvas = QgsMapCanvas()
