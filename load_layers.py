@@ -1,7 +1,7 @@
 import os
 
 # get the path to a geopackage  e.g. /home/project/data/data.gpkg
-path_to_gpkg = os.path.join(QgsProject.instance().homePath(), "GIS_Data.gpkg")
+path_to_gpkg = os.path.join(QgsProject.instance().homePath(), "GIS_Data_3857.gpkg")
 # specify the layernames from the gpkg to load.
 vlayerNamesList = ['Landsgrens','Gemeentegrenzen','Provinciegrenzen']
 
