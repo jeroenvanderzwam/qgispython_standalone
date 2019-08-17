@@ -5,6 +5,8 @@ from PyQt5.QtGui import QIcon
 from qgis.gui import QgsMapCanvas, QgsMapToolZoom
 from qgis.core import QgsProject, QgsVectorLayer
 
+import resources
+
 class Hoofdscherm(QMainWindow):
     
     def __init__(self):
