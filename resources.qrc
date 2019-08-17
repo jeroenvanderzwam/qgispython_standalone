@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/osm" >
+        <file alias="zoomin_icoon">afbeeldingen/zoomin_afbeelding.png</file>
+    </qresource>
+</RCC>
