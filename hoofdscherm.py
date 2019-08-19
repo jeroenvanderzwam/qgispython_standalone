@@ -2,8 +2,8 @@ import os
 
 from PyQt5.QtWidgets import QFrame, QGridLayout, QMainWindow, QAction
 from PyQt5.QtGui import QIcon
-from qgis.gui import QgsMapCanvas, QgsMapToolZoom, QgsMapToolPan
-from qgis.core import QgsProject, QgsVectorLayer, QgsRasterLayer
+from qgis.gui import QgsMapCanvas, QgsMapToolZoom, QgsMapToolPan, QgsMapToolEmitPoint
+from qgis.core import QgsProject, QgsVectorLayer, QgsRasterLayer, QgsGeometry, QgsPointXY
 
 import resources
 
@@ -84,9 +84,30 @@ class Hoofdscherm(QMainWindow):
         self.pan_action.triggered.connect(self.pan_tool)
         self.zoomIn_action.triggered.connect(self.zoomIn_tool)
         self.zoomOut_action.triggered.connect(self.zoomOut_tool)
+   
+    def krijg_provincienaam(self, point, mouse_button): 
+        layer = self.project.mapLayersByName('Provinciegrenzen')[0]
+        feats = [ feat for feat in layer.getFeatures() ]
 
+        geo_pt = QgsGeometry.fromPointXY(QgsPointXY(point.x(), point.y()))
+
+        id = -1
+
+        for feat in feats:
+            if geo_pt.within(feat.geometry()):
+                id = feat.id()
+                provincie = feat.attribute('Provincienaam')
+                break
+
+        if id != -1:
+            print(provincie)
+        else:
+            print ("Geen provincie aangeklikt.")
+        
     def osm_tool(self):
-        pass
+        self.tool_osm = QgsMapToolEmitPoint(self.map_canvas)
+        self.tool_osm.canvasClicked.connect(self.krijg_provincienaam)
+        self.map_canvas.setMapTool(self.tool_osm)
     
     def pan_tool(self):
         self.tool_pan = QgsMapToolPan(self.map_canvas)
