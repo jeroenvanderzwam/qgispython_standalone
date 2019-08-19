@@ -2,7 +2,7 @@ import os
 
 from PyQt5.QtWidgets import QFrame, QGridLayout, QMainWindow, QAction
 from PyQt5.QtGui import QIcon
-from qgis.gui import QgsMapCanvas, QgsMapToolZoom
+from qgis.gui import QgsMapCanvas, QgsMapToolZoom, QgsMapToolPan
 from qgis.core import QgsProject, QgsVectorLayer, QgsRasterLayer
 
 import resources
@@ -54,17 +54,48 @@ class Hoofdscherm(QMainWindow):
         self.grid_layout.addWidget(self.map_canvas)
 
         # Setup action for zoom in tool
-        self.zoomin_action = QAction(
+        self.osm_action = QAction(
             QIcon(":/osm/osm_data"),
             "Zoom In",
             self)
+        # Setup action for pan tool
+        self.pan_action = QAction(
+            QIcon(":/osm/pan"),
+            "Pan",
+            self)
+        # Setup action for ZoomIn tool
+        self.zoomIn_action = QAction(
+            QIcon(":/osm/ZoomIn"),
+            "Zoom in",
+            self)
+        # Setup action for ZoomOut tool
+        self.zoomOut_action = QAction(
+            QIcon(":/osm/ZoomOut"),
+            "Zoom out",
+            self)
         # create toolbar
         self.toolbar = self.addToolBar("Map Tools")
-        self.toolbar.addAction(self.zoomin_action)
+        self.toolbar.addAction(self.osm_action)
+        self.toolbar.addAction(self.pan_action)
+        self.toolbar.addAction(self.zoomIn_action)
+        self.toolbar.addAction(self.zoomOut_action)
 
-        self.zoomin_action.triggered.connect(self.zoom_in)
+        self.osm_action.triggered.connect(self.osm_tool)
+        self.pan_action.triggered.connect(self.pan_tool)
+        self.zoomIn_action.triggered.connect(self.zoomIn_tool)
+        self.zoomOut_action.triggered.connect(self.zoomOut_tool)
 
+    def osm_tool(self):
+        pass
+    
+    def pan_tool(self):
+        self.tool_pan = QgsMapToolPan(self.map_canvas)
+        self.map_canvas.setMapTool(self.tool_pan)
+        
+    def zoomIn_tool(self):
         self.tool_zoomin = QgsMapToolZoom(self.map_canvas, False)
-
-    def zoom_in(self):
         self.map_canvas.setMapTool(self.tool_zoomin)
+        
+    def zoomOut_tool(self):
+        self.tool_zoomout = QgsMapToolZoom(self.map_canvas, True)
+        self.map_canvas.setMapTool(self.tool_zoomout)
