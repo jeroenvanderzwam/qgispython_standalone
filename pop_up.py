@@ -1,18 +1,16 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'pop_up.ui'
-#
-# Created by: PyQt5 UI code generator 5.11.3
-#
-# WARNING! All changes made in this file will be lost!
+import urllib.request
+import zipfile
+import os
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_Pop_Up(object):
-    def __init__(self, parent):
+    def __init__(self, parent, provincie):
+        self.provincie = provincie
         super(Ui_Pop_Up, self).__init__()
         
     def setupUi(self, Pop_Up):
+        self.Pop_Up = Pop_Up
         Pop_Up.setObjectName("Pop_Up")
         Pop_Up.resize(200, 300)
         self.buttonBox = QtWidgets.QDialogButtonBox(Pop_Up)
@@ -51,17 +49,34 @@ class Ui_Pop_Up(object):
         self.tekst_opslaglocatie.setObjectName("tekst_opslaglocatie")
 
         self.retranslateUi(Pop_Up)
-        self.buttonBox.accepted.connect(Pop_Up.accept)
+        self.buttonBox.accepted.connect(self.download_files)
         self.buttonBox.rejected.connect(Pop_Up.reject)
         QtCore.QMetaObject.connectSlotsByName(Pop_Up)
+
+        self.bladeren.clicked.connect(self.select_folder)
 
     def retranslateUi(self, Pop_Up):
         _translate = QtCore.QCoreApplication.translate
         Pop_Up.setWindowTitle(_translate("Pop_Up", "Dialog"))
         self.bladeren.setText(_translate("Pop_Up", "..."))
         self.tekst_provincie.setText(_translate("Pop_Up", "Geselecteerde Provincie:"))
-        self.tekst_ProvincieNaam.setText(_translate("Pop_Up", "TextLabel"))
+        self.tekst_ProvincieNaam.setText(_translate("Pop_Up", self.provincie))
         self.tekst_opslaglocatie.setText(_translate("Pop_Up", "Opslaglocatie:"))
+
+    def select_folder(self):
+        file = str(QtWidgets.QFileDialog.getExistingDirectory(self.Pop_Up, "Select Directory"))
+        self.lineEdit.setText(file)
+
+    def download_files(self):
+        print(self.provincie)
+        zip_, headers = urllib.request.urlretrieve(f'http://download.geofabrik.de/europe/netherlands/{self.provincie.lower()}-latest-free.shp.zip')
+        with zipfile.ZipFile(zip_) as zf:
+            bestanden = zf.namelist()
+            for bestand in bestanden:
+                file_pad = os.path.join(self.lineEdit.text(), bestand)
+
+                with open(file_pad, 'wb') as f:
+                    f.write(zf.read(bestand))
 
 
 if __name__ == "__main__":
