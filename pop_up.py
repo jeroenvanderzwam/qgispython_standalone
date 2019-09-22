@@ -2,9 +2,11 @@ import urllib.request
 import zipfile
 import os
 
+import processing
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-class Ui_Pop_Up(object):
+class Ui_Pop_Up(QtWidgets.QDialog):
     def __init__(self, parent, provincie):
         self.provincie = provincie
         super(Ui_Pop_Up, self).__init__()
@@ -77,15 +79,23 @@ class Ui_Pop_Up(object):
         self.lineEdit.setText(file)
 
     def download_files(self):
-        print(self.provincie)
+        self.Pop_Up.reject()
+
+        shapes = []
         zip_, headers = urllib.request.urlretrieve(f'http://download.geofabrik.de/europe/netherlands/{self.provincie.lower()}-latest-free.shp.zip')
         with zipfile.ZipFile(zip_) as zf:
             bestanden = zf.namelist()
             for bestand in bestanden:
                 file_pad = os.path.join(self.lineEdit.text(), bestand)
-
+                if os.path.splitext(file_pad)[1] == '.shp':
+                    shapes.append(file_pad)
                 with open(file_pad, 'wb') as f:
                     f.write(zf.read(bestand))
+
+        processing.run("native:package", 
+                        {'LAYERS': shapes,
+                        'OUTPUT':os.path.join(self.lineEdit.text(), f'{self.provincie}.gpkg'),
+                        'OVERWRITE':False})
 
 
 if __name__ == "__main__":
