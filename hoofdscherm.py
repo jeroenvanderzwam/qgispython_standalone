@@ -2,10 +2,12 @@ import urllib.request
 import zipfile
 import os
 
-from PyQt5.QtWidgets import QFrame, QGridLayout, QMainWindow, QAction
+from PyQt5.QtWidgets import QFrame, QGridLayout, QMainWindow, QAction, QDialog
 from PyQt5.QtGui import QIcon
 from qgis.gui import QgsMapCanvas, QgsMapToolZoom, QgsMapToolPan, QgsMapToolEmitPoint
 from qgis.core import QgsProject, QgsVectorLayer, QgsRasterLayer, QgsGeometry, QgsPointXY
+
+from pop_up import Ui_Pop_Up
 
 import resources
 
@@ -105,7 +107,11 @@ class Hoofdscherm(QMainWindow):
                 break
 
         if id != -1:
-            self.download_files(provincie)
+            self.Pop_Up = QDialog()
+            self.nd = Ui_Pop_Up(self)
+            self.nd.setupUi(self.Pop_Up)
+            self.Pop_Up.show()
+            #self.download_files(provincie)
         else:
             print ("Geen provincie aangeklikt.")
         
@@ -127,7 +133,7 @@ class Hoofdscherm(QMainWindow):
         self.map_canvas.setMapTool(self.tool_zoomout)
 
     def download_files(self, provincie):
-        locatie = r'C:\Users\jeroe\Downloads\PyQGIS3\Projecten\standalone_qgis\shapefiles'
+        locatie = r'\shapefiles'
 
         zip_, headers = urllib.request.urlretrieve(f'http://download.geofabrik.de/europe/netherlands/{provincie.lower()}-latest-free.shp.zip')
         with zipfile.ZipFile(zip_) as zf:
