@@ -1,3 +1,5 @@
+import urllib.request
+import zipfile
 import os
 
 from PyQt5.QtWidgets import QFrame, QGridLayout, QMainWindow, QAction
@@ -16,6 +18,7 @@ class Hoofdscherm(QMainWindow):
 
         self.project = QgsProject()
         urlWithParams = 'type=xyz&url=http://a.tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png&zmax=19&zmin=0&crs=EPSG3857'
+
         rlaag = QgsRasterLayer(urlWithParams, 'OpenStreetMap', 'wms')
         if rlaag.isValid():
             self.project.addMapLayer(rlaag)
@@ -41,6 +44,7 @@ class Hoofdscherm(QMainWindow):
 
         extent = lagen[0].extent()
         self.map_canvas.setExtent(extent)
+
 
     def setupGui(self):
         frame = QFrame(self)
@@ -86,6 +90,7 @@ class Hoofdscherm(QMainWindow):
         self.zoomOut_action.triggered.connect(self.zoomOut_tool)
    
     def krijg_provincienaam(self, point, mouse_button): 
+
         layer = self.project.mapLayersByName('Provinciegrenzen')[0]
         feats = [ feat for feat in layer.getFeatures() ]
 
@@ -100,7 +105,7 @@ class Hoofdscherm(QMainWindow):
                 break
 
         if id != -1:
-            print(provincie)
+            self.download_files(provincie)
         else:
             print ("Geen provincie aangeklikt.")
         
@@ -120,3 +125,15 @@ class Hoofdscherm(QMainWindow):
     def zoomOut_tool(self):
         self.tool_zoomout = QgsMapToolZoom(self.map_canvas, True)
         self.map_canvas.setMapTool(self.tool_zoomout)
+
+    def download_files(self, provincie):
+        locatie = r'C:\Users\jeroe\Downloads\PyQGIS3\Projecten\standalone_qgis\shapefiles'
+
+        zip_, headers = urllib.request.urlretrieve(f'http://download.geofabrik.de/europe/netherlands/{provincie.lower()}-latest-free.shp.zip')
+        with zipfile.ZipFile(zip_) as zf:
+            bestanden = zf.namelist()
+            for bestand in bestanden:
+                file_pad = os.path.join(locatie, bestand)
+
+                with open(file_pad, 'wb') as f:
+                    f.write(zf.read(bestand))
