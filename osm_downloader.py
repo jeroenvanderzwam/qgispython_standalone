@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import QApplication
 from qgis.core import QgsApplication
+import os
 
 from processing.core.Processing import Processing
 
@@ -10,7 +11,7 @@ from hoofdscherm import Hoofdscherm
 app = QApplication([])
 
 qgs = QgsApplication([], False)
-qgs.setPrefixPath(r'C:\Program Files\QGIS 3.4\apps\qgis', True)
+qgs.setPrefixPath(os.environ['QGIS_PREFIX_PATH'], True)
 
 Processing.initialize()
 QgsApplication.processingRegistry().addProvider(QgsNativeAlgorithms())
@@ -22,4 +23,3 @@ hoofd.show()
 app.exec_()
 hoofd = None
 QgsApplication.exitQgis()
-
