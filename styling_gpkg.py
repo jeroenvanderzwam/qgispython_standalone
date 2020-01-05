@@ -1,13 +1,26 @@
-style_laag = QgsVectorLayer(r"C:\Users\jeroe\Downloads\PyQGIS3\Projecten\standalone_qgis\shapefiles\Zeeland.gpkg|layername=layer_styles","style","ogr")
-field_names = [f.name() for f in style_laag.fields()]
+from qgis.core import *
+import os
 
-print(field_names)
+uitvoeren = False
 
+# pad naar de gpkg aanpassen
+style_laag = QgsVectorLayer(r"C:\Users\jeroe\Downloads\PyQGIS3\Projecten\standalone_qgis\data\Utrecht.gpkg|layername=layer_styles","style","ogr")
+
+# functie die de styling files inleest
+def read_style(type, naam):
+   pad = f'styling/{type}'
+   with open(pad + '/' + naam, 'r') as f:
+      return f.read()
+
+# elem.attributes()[3] is de naam van de laag. Deze moet gelijk zijn aan de sld
+style_laag.startEditing()
 for elem in style_laag.getFeatures():  
-   #print(dict(zip(field_names, elem.attributes())))
-   feat = QgsFeature(style_laag.fields())
-   print(elem.attributes())
-   feat.setAttributes(list(range(2, 14)))
-   (res, outFeats) = style_laag.dataProvider().addFeatures([feat])
+   if elem.attributes()[3] != NULL:
+      print(elem.attributes()[3])
+      if uitvoeren:
+         style_laag.changeAttributeValue(elem.id(), 6, read_style('qml', elem.attributes()[3] + 'qml'))
+         style_laag.changeAttributeValue(elem.id(), 7, read_style('sld', elem.attributes()[3] + 'sld'))
+
+style_laag.commitChanges()
 
 QgsProject.instance().addMapLayer(style_laag)
