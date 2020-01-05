@@ -1,12 +1,10 @@
-# H4
 Dit is een standalone python qgis applicatie.
 Gebouwd in windows.
 Hiervoor is het wel noodzakelijk dat QGIS is geinstalleerd.
 Daarnaast is het belangrijk dat er padvariabelen ingesteld worden voor de applicatie
 kan worden gebruikt. Kijk hieronder voor meer informatie.
 
-```
-SET OSGEO4W_ROOT=C:\OSGeo4W64
+```SET OSGEO4W_ROOT=C:\OSGeo4W64
 call "%OSGEO4W_ROOT%"\bin\o4w_env.bat
 call "%OSGEO4W_ROOT%"\apps\grass\grass76\etc\env.bat
 
