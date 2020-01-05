@@ -1,6 +1,6 @@
 ### Dit is een standalone python qgis applicatie. Gebouwd in windows. Hiervoor is het wel noodzakelijk dat QGIS is geinstalleerd. Daarnaast is het belangrijk dat er padvariabelen ingesteld worden voor de applicatie kan worden gebruikt. Kijk hieronder voor meer informatie.
 
-#### De variabele OSGEO4W_ROOT is het pad waar QGIS staat geinstalleerd. Pas deze aan naar jou installatie folder. Ook de grass versie kan veranderen, check deze dus altijd. Ditzelde geldt voor de python versie.
+#### De variabele OSGEO4W_ROOT is het pad waar QGIS staat geinstalleerd. Pas deze aan naar jou installatie folder. Ook de grass versie kan veranderen, check deze dus altijd. Ditzelfde geldt voor de python versie.
 
     SET OSGEO4W_ROOT=C:\OSGeo4W64
     call "%OSGEO4W_ROOT%"\bin\o4w_env.bat
@@ -20,3 +20,7 @@
     set QGIS_PREFIX_PATH=%OSGEO4W_ROOT%\apps\qgis
 
     set GDAL_DATA=%OSGEO4W_ROOT%\share\gdal
+
+#### Nadat je deze commandas in de cmd hebt uitgevoerd zal python3 nu verwijzen naar de juiste python (binnen qgis) nu zou je met
+    python3 osm_downloader.py 
+#### de applicatie kunnen starten.
