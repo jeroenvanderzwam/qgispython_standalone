@@ -1,3 +1,5 @@
+# OSM downloader
+
 ### Dit is een standalone python qgis applicatie. Gebouwd in windows. Hiervoor is het wel noodzakelijk dat QGIS is geinstalleerd. Daarnaast is het belangrijk dat er padvariabelen ingesteld worden voor de applicatie kan worden gebruikt. Kijk hieronder voor meer informatie.
 
 #### De variabele OSGEO4W_ROOT is het pad waar QGIS staat geinstalleerd. Pas deze aan naar jou installatie folder. Ook de grass versie kan veranderen, check deze dus altijd. Ditzelfde geldt voor de python versie.
