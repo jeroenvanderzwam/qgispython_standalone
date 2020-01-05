@@ -1,8 +1,6 @@
 <html>
 <body>
-<h4>
-Henk
-    Dit is een standalone python qgis applicatie.
+<h4>Dit is een standalone python qgis applicatie.
     Gebouwd in windows.
     Hiervoor is het wel noodzakelijk dat QGIS is geinstalleerd.
     Daarnaast is het belangrijk dat er padvariabelen ingesteld worden voor de applicatie
