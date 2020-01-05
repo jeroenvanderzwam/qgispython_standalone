@@ -4,7 +4,7 @@
 
 #### De variabele OSGEO4W_ROOT is het pad waar QGIS staat geinstalleerd. Pas deze aan naar jou installatie folder. Ook de grass versie kan veranderen, check deze dus altijd. Ditzelfde geldt voor de python versie.
 
-```dos
+```cmd
 SET OSGEO4W_ROOT=C:\OSGeo4W64
 call "%OSGEO4W_ROOT%"\bin\o4w_env.bat
 call "%OSGEO4W_ROOT%"\apps\grass\grass76\etc\env.bat
