@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:se="http://www.opengis.net/se" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ogc="http://www.opengis.net/ogc" version="1.1.0" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd">
+<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se" version="1.1.0" xmlns:xlink="http://www.w3.org/1999/xlink">
   <NamedLayer>
     <se:Name>gis_osm_places_free_1</se:Name>
     <UserStyle>
       <se:Name>gis_osm_places_free_1</se:Name>
       <se:FeatureTypeStyle>
         <se:Rule>
-          <se:Name>hamlet</se:Name>
-          <se:Description>
-            <se:Title>hamlet</se:Title>
-          </se:Description>
-          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
-            <ogc:PropertyIsEqualTo>
-              <ogc:PropertyName>fclass</ogc:PropertyName>
-              <ogc:Literal>hamlet</ogc:Literal>
-            </ogc:PropertyIsEqualTo>
-          </ogc:Filter>
+          <se:Name>Single symbol</se:Name>
           <se:MinScaleDenominator>0</se:MinScaleDenominator>
           <se:MaxScaleDenominator>5001</se:MaxScaleDenominator>
           <se:PointSymbolizer>
@@ -24,127 +15,9 @@
                 <se:WellKnownName>circle</se:WellKnownName>
                 <se:Fill>
                   <se:SvgParameter name="fill">#d53e4f</se:SvgParameter>
+                  <se:SvgParameter name="fill-opacity">0</se:SvgParameter>
                 </se:Fill>
-                <se:Stroke>
-                  <se:SvgParameter name="stroke">#000000</se:SvgParameter>
-                  <se:SvgParameter name="stroke-width">0.5</se:SvgParameter>
-                </se:Stroke>
-              </se:Mark>
-              <se:Size>4</se:Size>
-            </se:Graphic>
-          </se:PointSymbolizer>
-        </se:Rule>
-        <se:Rule>
-          <se:Name>locality</se:Name>
-          <se:Description>
-            <se:Title>locality</se:Title>
-          </se:Description>
-          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
-            <ogc:PropertyIsEqualTo>
-              <ogc:PropertyName>fclass</ogc:PropertyName>
-              <ogc:Literal>locality</ogc:Literal>
-            </ogc:PropertyIsEqualTo>
-          </ogc:Filter>
-          <se:MinScaleDenominator>0</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>5001</se:MaxScaleDenominator>
-          <se:PointSymbolizer>
-            <se:Graphic>
-              <se:Mark>
-                <se:WellKnownName>circle</se:WellKnownName>
-                <se:Fill>
-                  <se:SvgParameter name="fill">#fdae61</se:SvgParameter>
-                </se:Fill>
-                <se:Stroke>
-                  <se:SvgParameter name="stroke">#000000</se:SvgParameter>
-                  <se:SvgParameter name="stroke-width">0.5</se:SvgParameter>
-                </se:Stroke>
-              </se:Mark>
-              <se:Size>4</se:Size>
-            </se:Graphic>
-          </se:PointSymbolizer>
-        </se:Rule>
-        <se:Rule>
-          <se:Name>suburb</se:Name>
-          <se:Description>
-            <se:Title>suburb</se:Title>
-          </se:Description>
-          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
-            <ogc:PropertyIsEqualTo>
-              <ogc:PropertyName>fclass</ogc:PropertyName>
-              <ogc:Literal>suburb</ogc:Literal>
-            </ogc:PropertyIsEqualTo>
-          </ogc:Filter>
-          <se:MinScaleDenominator>0</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>5001</se:MaxScaleDenominator>
-          <se:PointSymbolizer>
-            <se:Graphic>
-              <se:Mark>
-                <se:WellKnownName>circle</se:WellKnownName>
-                <se:Fill>
-                  <se:SvgParameter name="fill">#ffffbf</se:SvgParameter>
-                </se:Fill>
-                <se:Stroke>
-                  <se:SvgParameter name="stroke">#000000</se:SvgParameter>
-                  <se:SvgParameter name="stroke-width">0.5</se:SvgParameter>
-                </se:Stroke>
-              </se:Mark>
-              <se:Size>4</se:Size>
-            </se:Graphic>
-          </se:PointSymbolizer>
-        </se:Rule>
-        <se:Rule>
-          <se:Name>town</se:Name>
-          <se:Description>
-            <se:Title>town</se:Title>
-          </se:Description>
-          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
-            <ogc:PropertyIsEqualTo>
-              <ogc:PropertyName>fclass</ogc:PropertyName>
-              <ogc:Literal>town</ogc:Literal>
-            </ogc:PropertyIsEqualTo>
-          </ogc:Filter>
-          <se:MinScaleDenominator>0</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>5001</se:MaxScaleDenominator>
-          <se:PointSymbolizer>
-            <se:Graphic>
-              <se:Mark>
-                <se:WellKnownName>circle</se:WellKnownName>
-                <se:Fill>
-                  <se:SvgParameter name="fill">#abdda4</se:SvgParameter>
-                </se:Fill>
-                <se:Stroke>
-                  <se:SvgParameter name="stroke">#000000</se:SvgParameter>
-                  <se:SvgParameter name="stroke-width">0.5</se:SvgParameter>
-                </se:Stroke>
-              </se:Mark>
-              <se:Size>4</se:Size>
-            </se:Graphic>
-          </se:PointSymbolizer>
-        </se:Rule>
-        <se:Rule>
-          <se:Name>village</se:Name>
-          <se:Description>
-            <se:Title>village</se:Title>
-          </se:Description>
-          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
-            <ogc:PropertyIsEqualTo>
-              <ogc:PropertyName>fclass</ogc:PropertyName>
-              <ogc:Literal>village</ogc:Literal>
-            </ogc:PropertyIsEqualTo>
-          </ogc:Filter>
-          <se:MinScaleDenominator>0</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>5001</se:MaxScaleDenominator>
-          <se:PointSymbolizer>
-            <se:Graphic>
-              <se:Mark>
-                <se:WellKnownName>circle</se:WellKnownName>
-                <se:Fill>
-                  <se:SvgParameter name="fill">#3288bd</se:SvgParameter>
-                </se:Fill>
-                <se:Stroke>
-                  <se:SvgParameter name="stroke">#000000</se:SvgParameter>
-                  <se:SvgParameter name="stroke-width">0.5</se:SvgParameter>
-                </se:Stroke>
+                <se:Stroke/>
               </se:Mark>
               <se:Size>4</se:Size>
             </se:Graphic>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:se="http://www.opengis.net/se" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ogc="http://www.opengis.net/ogc" version="1.1.0" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd">
+<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se" version="1.1.0" xmlns:xlink="http://www.w3.org/1999/xlink">
   <NamedLayer>
     <se:Name>gis_osm_pois_free_1</se:Name>
     <UserStyle>
@@ -1198,7 +1198,7 @@
             <se:Graphic>
               <!--Parametric SVG-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/symbol/poi_tower_communications.svg?fill=%23000000&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/symbol/poi_tower_communications.svg?fill=%23666666&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Plain SVG fallback, no parameters-->
@@ -1210,7 +1210,7 @@
               <se:Mark>
                 <se:WellKnownName>square</se:WellKnownName>
                 <se:Fill>
-                  <se:SvgParameter name="fill">#000000</se:SvgParameter>
+                  <se:SvgParameter name="fill">#666666</se:SvgParameter>
                 </se:Fill>
                 <se:Stroke>
                   <se:SvgParameter name="stroke">#232323</se:SvgParameter>
@@ -5239,6 +5239,440 @@
                 </se:Stroke>
               </se:Mark>
               <se:Size>2.79999999999999982</se:Size>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>battlefield</se:Name>
+          <se:Description>
+            <se:Title>battlefield</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>fclass</ogc:PropertyName>
+              <ogc:Literal>battlefield</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <se:MinScaleDenominator>0</se:MinScaleDenominator>
+          <se:MaxScaleDenominator>5001</se:MaxScaleDenominator>
+          <se:PointSymbolizer>
+            <se:Graphic>
+              <!--Parametric SVG-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/tourist/tourist_battlefield.svg?fill=%2373531f&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Plain SVG fallback, no parameters-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="tourist/tourist_battlefield.svg"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Well known marker fallback-->
+              <se:Mark>
+                <se:WellKnownName>square</se:WellKnownName>
+                <se:Fill>
+                  <se:SvgParameter name="fill">#73531f</se:SvgParameter>
+                </se:Fill>
+                <se:Stroke>
+                  <se:SvgParameter name="stroke">#232323</se:SvgParameter>
+                  <se:SvgParameter name="stroke-width">0.5</se:SvgParameter>
+                </se:Stroke>
+              </se:Mark>
+              <se:Size>2.79999999999999982</se:Size>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>bed_and_breakfast</se:Name>
+          <se:Description>
+            <se:Title>bed_and_breakfast</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>fclass</ogc:PropertyName>
+              <ogc:Literal>bed_and_breakfast</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <se:MinScaleDenominator>0</se:MinScaleDenominator>
+          <se:MaxScaleDenominator>5001</se:MaxScaleDenominator>
+          <se:PointSymbolizer>
+            <se:Graphic>
+              <!--Parametric SVG-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/accommodation/accommodation_bed_and_breakfast.svg?fill=%23ad3dad&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Plain SVG fallback, no parameters-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="accommodation/accommodation_bed_and_breakfast.svg"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Well known marker fallback-->
+              <se:Mark>
+                <se:WellKnownName>square</se:WellKnownName>
+                <se:Fill>
+                  <se:SvgParameter name="fill">#ad3dad</se:SvgParameter>
+                </se:Fill>
+                <se:Stroke>
+                  <se:SvgParameter name="stroke">#232323</se:SvgParameter>
+                  <se:SvgParameter name="stroke-width">0.5</se:SvgParameter>
+                </se:Stroke>
+              </se:Mark>
+              <se:Size>2.79999999999999982</se:Size>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>biergarten</se:Name>
+          <se:Description>
+            <se:Title>biergarten</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>fclass</ogc:PropertyName>
+              <ogc:Literal>biergarten</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <se:MinScaleDenominator>0</se:MinScaleDenominator>
+          <se:MaxScaleDenominator>5001</se:MaxScaleDenominator>
+          <se:PointSymbolizer>
+            <se:Graphic>
+              <!--Parametric SVG-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/entertainment/amenity=pub.svg?fill=%23c77400&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Plain SVG fallback, no parameters-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="entertainment/amenity=pub.svg"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Well known marker fallback-->
+              <se:Mark>
+                <se:WellKnownName>square</se:WellKnownName>
+                <se:Fill>
+                  <se:SvgParameter name="fill">#c77400</se:SvgParameter>
+                </se:Fill>
+                <se:Stroke>
+                  <se:SvgParameter name="stroke">#232323</se:SvgParameter>
+                  <se:SvgParameter name="stroke-width">0.5</se:SvgParameter>
+                </se:Stroke>
+              </se:Mark>
+              <se:Size>2.79999999999999982</se:Size>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>courthouse</se:Name>
+          <se:Description>
+            <se:Title>courthouse</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>fclass</ogc:PropertyName>
+              <ogc:Literal>courthouse</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <se:MinScaleDenominator>0</se:MinScaleDenominator>
+          <se:MaxScaleDenominator>5001</se:MaxScaleDenominator>
+          <se:PointSymbolizer>
+            <se:Graphic>
+              <!--Parametric SVG-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/amenity/amenity_court.svg?fill=%23754c0b&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Plain SVG fallback, no parameters-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="amenity/amenity_court.svg"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Well known marker fallback-->
+              <se:Mark>
+                <se:WellKnownName>square</se:WellKnownName>
+                <se:Fill>
+                  <se:SvgParameter name="fill">#754c0b</se:SvgParameter>
+                </se:Fill>
+                <se:Stroke>
+                  <se:SvgParameter name="stroke">#232323</se:SvgParameter>
+                  <se:SvgParameter name="stroke-width">0.5</se:SvgParameter>
+                </se:Stroke>
+              </se:Mark>
+              <se:Size>2.79999999999999982</se:Size>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>fort</se:Name>
+          <se:Description>
+            <se:Title>fort</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>fclass</ogc:PropertyName>
+              <ogc:Literal>fort</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <se:MinScaleDenominator>0</se:MinScaleDenominator>
+          <se:MaxScaleDenominator>5001</se:MaxScaleDenominator>
+          <se:PointSymbolizer>
+            <se:Graphic>
+              <!--Parametric SVG-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/tourist/tourist_beach.svg?fill=%23734a08&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Plain SVG fallback, no parameters-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="tourist/tourist_beach.svg"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Well known marker fallback-->
+              <se:Mark>
+                <se:WellKnownName>square</se:WellKnownName>
+                <se:Fill>
+                  <se:SvgParameter name="fill">#734a08</se:SvgParameter>
+                </se:Fill>
+                <se:Stroke>
+                  <se:SvgParameter name="stroke">#232323</se:SvgParameter>
+                  <se:SvgParameter name="stroke-width">0.5</se:SvgParameter>
+                </se:Stroke>
+              </se:Mark>
+              <se:Size>2.79999999999999982</se:Size>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>golf_course</se:Name>
+          <se:Description>
+            <se:Title>golf_course</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>fclass</ogc:PropertyName>
+              <ogc:Literal>golf_course</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <se:MinScaleDenominator>0</se:MinScaleDenominator>
+          <se:MaxScaleDenominator>5001</se:MaxScaleDenominator>
+          <se:PointSymbolizer>
+            <se:Graphic>
+              <!--Parametric SVG-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/sport/sport_golf.svg?fill=%23228c29&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Plain SVG fallback, no parameters-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="sport/sport_golf.svg"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Well known marker fallback-->
+              <se:Mark>
+                <se:WellKnownName>square</se:WellKnownName>
+                <se:Fill>
+                  <se:SvgParameter name="fill">#228c29</se:SvgParameter>
+                </se:Fill>
+                <se:Stroke>
+                  <se:SvgParameter name="stroke">#232323</se:SvgParameter>
+                  <se:SvgParameter name="stroke-width">0.5</se:SvgParameter>
+                </se:Stroke>
+              </se:Mark>
+              <se:Size>2.79999999999999982</se:Size>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>graveyard</se:Name>
+          <se:Description>
+            <se:Title>graveyard</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>fclass</ogc:PropertyName>
+              <ogc:Literal>graveyard</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <se:MinScaleDenominator>0</se:MinScaleDenominator>
+          <se:MaxScaleDenominator>5001</se:MaxScaleDenominator>
+          <se:PointSymbolizer>
+            <se:Graphic>
+              <!--Parametric SVG-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/transport/barrier_bollard.svg?fill=%239a9a9a&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Plain SVG fallback, no parameters-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="transport/barrier_bollard.svg"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Well known marker fallback-->
+              <se:Mark>
+                <se:WellKnownName>square</se:WellKnownName>
+                <se:Fill>
+                  <se:SvgParameter name="fill">#9a9a9a</se:SvgParameter>
+                </se:Fill>
+                <se:Stroke>
+                  <se:SvgParameter name="stroke">#232323</se:SvgParameter>
+                  <se:SvgParameter name="stroke-width">0.5</se:SvgParameter>
+                </se:Stroke>
+              </se:Mark>
+              <se:Size>2.79999999999999982</se:Size>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>water_mill</se:Name>
+          <se:Description>
+            <se:Title>water_mill</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>fclass</ogc:PropertyName>
+              <ogc:Literal>water_mill</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <se:MinScaleDenominator>0</se:MinScaleDenominator>
+          <se:MaxScaleDenominator>5001</se:MaxScaleDenominator>
+          <se:PointSymbolizer>
+            <se:Graphic>
+              <!--Parametric SVG-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/tourist/tourist_waterwheel.svg?fill=%234d80b3&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Plain SVG fallback, no parameters-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="tourist/tourist_waterwheel.svg"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Well known marker fallback-->
+              <se:Mark>
+                <se:WellKnownName>square</se:WellKnownName>
+                <se:Fill>
+                  <se:SvgParameter name="fill">#4d80b3</se:SvgParameter>
+                </se:Fill>
+                <se:Stroke>
+                  <se:SvgParameter name="stroke">#232323</se:SvgParameter>
+                  <se:SvgParameter name="stroke-width">0.5</se:SvgParameter>
+                </se:Stroke>
+              </se:Mark>
+              <se:Size>2.79999999999999982</se:Size>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>water_works</se:Name>
+          <se:Description>
+            <se:Title>water_works</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>fclass</ogc:PropertyName>
+              <ogc:Literal>water_works</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <se:MinScaleDenominator>0</se:MinScaleDenominator>
+          <se:MaxScaleDenominator>5001</se:MaxScaleDenominator>
+          <se:PointSymbolizer>
+            <se:Graphic>
+              <!--Parametric SVG-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/gpsicons/waypoint.svg?fill=%234d80b3&amp;fill-opacity=1&amp;outline=%23ffffff&amp;outline-opacity=1&amp;outline-width=0"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Plain SVG fallback, no parameters-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="gpsicons/waypoint.svg"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Well known marker fallback-->
+              <se:Mark>
+                <se:WellKnownName>square</se:WellKnownName>
+                <se:Fill>
+                  <se:SvgParameter name="fill">#4d80b3</se:SvgParameter>
+                </se:Fill>
+                <se:Stroke>
+                  <se:SvgParameter name="stroke">#ffffff</se:SvgParameter>
+                  <se:SvgParameter name="stroke-width">0.5</se:SvgParameter>
+                </se:Stroke>
+              </se:Mark>
+              <se:Size>2.79999999999999982</se:Size>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>wayside_shrine</se:Name>
+          <se:Description>
+            <se:Title>wayside_shrine</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>fclass</ogc:PropertyName>
+              <ogc:Literal>wayside_shrine</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <se:MinScaleDenominator>0</se:MinScaleDenominator>
+          <se:MaxScaleDenominator>5001</se:MaxScaleDenominator>
+          <se:PointSymbolizer>
+            <se:Graphic>
+              <!--Parametric SVG-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/religion/place_of_worship.svg?fill=%23734a08&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Plain SVG fallback, no parameters-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="religion/place_of_worship.svg"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Well known marker fallback-->
+              <se:Mark>
+                <se:WellKnownName>square</se:WellKnownName>
+                <se:Fill>
+                  <se:SvgParameter name="fill">#734a08</se:SvgParameter>
+                </se:Fill>
+                <se:Stroke>
+                  <se:SvgParameter name="stroke">#232323</se:SvgParameter>
+                  <se:SvgParameter name="stroke-width">0.5</se:SvgParameter>
+                </se:Stroke>
+              </se:Mark>
+              <se:Size>2.79999999999999982</se:Size>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>not classified</se:Name>
+          <se:Description>
+            <se:Title>not classified</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:Or>
+              <ogc:PropertyIsEqualTo>
+                <ogc:PropertyName>fclass</ogc:PropertyName>
+                <ogc:Literal></ogc:Literal>
+              </ogc:PropertyIsEqualTo>
+              <ogc:PropertyIsNull>
+                <ogc:PropertyName>fclass</ogc:PropertyName>
+              </ogc:PropertyIsNull>
+            </ogc:Or>
+          </ogc:Filter>
+          <se:MinScaleDenominator>0</se:MinScaleDenominator>
+          <se:MaxScaleDenominator>5001</se:MaxScaleDenominator>
+          <se:PointSymbolizer>
+            <se:Graphic>
+              <se:Mark>
+                <se:WellKnownName>circle</se:WellKnownName>
+                <se:Fill>
+                  <se:SvgParameter name="fill">#ffffff</se:SvgParameter>
+                </se:Fill>
+                <se:Stroke>
+                  <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                  <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+                </se:Stroke>
+              </se:Mark>
+              <se:Size>14</se:Size>
             </se:Graphic>
           </se:PointSymbolizer>
         </se:Rule>

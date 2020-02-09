@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:se="http://www.opengis.net/se" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ogc="http://www.opengis.net/ogc" version="1.1.0" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd">
+<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se" version="1.1.0" xmlns:xlink="http://www.w3.org/1999/xlink">
   <NamedLayer>
     <se:Name>gis_osm_pois_a_free_1</se:Name>
     <UserStyle>
@@ -106,9 +106,9 @@
           </se:PolygonSymbolizer>
         </se:Rule>
         <se:Rule>
-          <se:Name>bakery,beverages,bookshop,butcher,clothes,computer_shop,convenience,department_store,doityourself,florist,furniture_shop,garden_centre,mall,mobile_phone_shop,shoe_shop,supermarket,kiosk,greengrocer</se:Name>
+          <se:Name>bakery,beverages,bookshop,butcher,clothes,computer_shop,convenience,department_store,doityourself,florist,furniture_shop,garden_centre,mall,mobile_phone_shop,shoe_shop,supermarket,kiosk,greengrocer,gift_shop,jeweller,outdoor_shop,pharmacy</se:Name>
           <se:Description>
-            <se:Title>bakery,beverages,bookshop,butcher,clothes,computer_shop,convenience,department_store,doityourself,florist,furniture_shop,garden_centre,mall,mobile_phone_shop,shoe_shop,supermarket,kiosk,greengrocer</se:Title>
+            <se:Title>bakery,beverages,bookshop,butcher,clothes,computer_shop,convenience,department_store,doityourself,florist,furniture_shop,garden_centre,mall,mobile_phone_shop,shoe_shop,supermarket,kiosk,greengrocer,gift_shop,jeweller,outdoor_shop,pharmacy</se:Title>
           </se:Description>
           <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
             <ogc:Or>
@@ -198,15 +198,20 @@
           </se:PolygonSymbolizer>
         </se:Rule>
         <se:Rule>
-          <se:Name>bench</se:Name>
+          <se:Name>bench,wayside_cross,wayside_shrine</se:Name>
           <se:Description>
-            <se:Title>bench</se:Title>
+            <se:Title>bench,wayside_cross,wayside_shrine</se:Title>
           </se:Description>
           <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
-            <ogc:PropertyIsEqualTo>
-              <ogc:PropertyName>fclass</ogc:PropertyName>
-              <ogc:Literal>bench</ogc:Literal>
-            </ogc:PropertyIsEqualTo>
+            <ogc:Or>
+              <ogc:PropertyIsEqualTo>
+                <ogc:PropertyName>fclass</ogc:PropertyName>
+                <ogc:Literal></ogc:Literal>
+              </ogc:PropertyIsEqualTo>
+              <ogc:PropertyIsNull>
+                <ogc:PropertyName>fclass</ogc:PropertyName>
+              </ogc:PropertyIsNull>
+            </ogc:Or>
           </ogc:Filter>
           <se:MinScaleDenominator>0</se:MinScaleDenominator>
           <se:MaxScaleDenominator>20000</se:MaxScaleDenominator>
@@ -457,9 +462,9 @@
           </se:PolygonSymbolizer>
         </se:Rule>
         <se:Rule>
-          <se:Name>hospital,fire_station,police,doctors,chemist</se:Name>
+          <se:Name>hospital,fire_station,police,doctors,chemist,dentist,optician</se:Name>
           <se:Description>
-            <se:Title>hospital,fire_station,police,doctors,chemist</se:Title>
+            <se:Title>hospital,fire_station,police,doctors,chemist,dentist,optician</se:Title>
           </se:Description>
           <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
             <ogc:Or>
@@ -743,15 +748,20 @@
           </se:PolygonSymbolizer>
         </se:Rule>
         <se:Rule>
-          <se:Name>wastewater_plant</se:Name>
+          <se:Name>wastewater_plant,waste_basket</se:Name>
           <se:Description>
-            <se:Title>wastewater_plant</se:Title>
+            <se:Title>wastewater_plant,waste_basket</se:Title>
           </se:Description>
           <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
-            <ogc:PropertyIsEqualTo>
-              <ogc:PropertyName>fclass</ogc:PropertyName>
-              <ogc:Literal>wastewater_plant</ogc:Literal>
-            </ogc:PropertyIsEqualTo>
+            <ogc:Or>
+              <ogc:PropertyIsEqualTo>
+                <ogc:PropertyName>fclass</ogc:PropertyName>
+                <ogc:Literal></ogc:Literal>
+              </ogc:PropertyIsEqualTo>
+              <ogc:PropertyIsNull>
+                <ogc:PropertyName>fclass</ogc:PropertyName>
+              </ogc:PropertyIsNull>
+            </ogc:Or>
           </ogc:Filter>
           <se:MinScaleDenominator>0</se:MinScaleDenominator>
           <se:MaxScaleDenominator>20000</se:MaxScaleDenominator>
@@ -777,9 +787,9 @@
           </se:PolygonSymbolizer>
         </se:Rule>
         <se:Rule>
-          <se:Name>water_tower,water_well,water_works</se:Name>
+          <se:Name>water_tower,water_well,water_works,water_mill</se:Name>
           <se:Description>
-            <se:Title>water_tower,water_well,water_works</se:Title>
+            <se:Title>water_tower,water_well,water_works,water_mill</se:Title>
           </se:Description>
           <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
             <ogc:Or>
@@ -856,9 +866,43 @@
           </se:PolygonSymbolizer>
         </se:Rule>
         <se:Rule>
-          <se:Name></se:Name>
+          <se:Name>comms_tower</se:Name>
           <se:Description>
-            <se:Title>fclass is ''</se:Title>
+            <se:Title>comms_tower</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>fclass</ogc:PropertyName>
+              <ogc:Literal>comms_tower</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <se:MinScaleDenominator>0</se:MinScaleDenominator>
+          <se:MaxScaleDenominator>20000</se:MaxScaleDenominator>
+          <se:PolygonSymbolizer>
+            <se:Fill>
+              <se:GraphicFill>
+                <se:Graphic>
+                  <se:Mark>
+                    <se:WellKnownName>brush://dense7</se:WellKnownName>
+                    <se:Fill>
+                      <se:SvgParameter name="fill">#666666</se:SvgParameter>
+                    </se:Fill>
+                  </se:Mark>
+                </se:Graphic>
+              </se:GraphicFill>
+            </se:Fill>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#666666</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">0.5</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-dasharray">4 2</se:SvgParameter>
+            </se:Stroke>
+          </se:PolygonSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>not classified</se:Name>
+          <se:Description>
+            <se:Title>not classified</se:Title>
           </se:Description>
           <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
             <ogc:Or>
