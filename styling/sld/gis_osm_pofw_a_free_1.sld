@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:se="http://www.opengis.net/se" version="1.1.0" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:se="http://www.opengis.net/se" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ogc="http://www.opengis.net/ogc" version="1.1.0" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd">
   <NamedLayer>
     <se:Name>gis_osm_pofw_a_free_1</se:Name>
     <UserStyle>
@@ -22,12 +22,12 @@
             <se:Graphic>
               <!--Parametric SVG-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="C:/OSGEO4~1/apps/qgis/svg/landmark/religion=buddhist.svg?fill=%23000000&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/landmark/religion=buddhist.svg?fill=%23000000&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Plain SVG fallback, no parameters-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="landmark/religion=buddhist.svg" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="landmark/religion=buddhist.svg"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Well known marker fallback-->
@@ -67,12 +67,12 @@
             <se:Graphic>
               <!--Parametric SVG-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="C:/OSGEO4~1/apps/qgis/svg/landmark/religion=christian.svg?fill=%23000000&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/landmark/religion=christian.svg?fill=%23000000&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Plain SVG fallback, no parameters-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="landmark/religion=christian.svg" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="landmark/religion=christian.svg"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Well known marker fallback-->
@@ -107,12 +107,12 @@
             <se:Graphic>
               <!--Parametric SVG-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="C:/OSGEO4~1/apps/qgis/svg/landmark/religion=hindu.svg?fill=%23232323&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=1" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/landmark/religion=hindu.svg?fill=%23232323&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=1"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Plain SVG fallback, no parameters-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="landmark/religion=hindu.svg" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="landmark/religion=hindu.svg"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Well known marker fallback-->
@@ -149,12 +149,12 @@
                 <se:Graphic>
                   <!--Parametric SVG-->
                   <se:ExternalGraphic>
-                    <se:OnlineResource xlink:href="C:/OSGEO4~1/apps/qgis/svg/landmark/religion=jewish.svg?fill=%23000000&amp;fill-opacity=0.2&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0" xlink:type="simple"/>
+                    <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/landmark/religion=jewish.svg?fill=%23000000&amp;fill-opacity=0.2&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0"/>
                     <se:Format>image/svg+xml</se:Format>
                   </se:ExternalGraphic>
                   <!--Plain SVG fallback, no parameters-->
                   <se:ExternalGraphic>
-                    <se:OnlineResource xlink:href="landmark/religion=jewish.svg" xlink:type="simple"/>
+                    <se:OnlineResource xlink:type="simple" xlink:href="landmark/religion=jewish.svg"/>
                     <se:Format>image/svg+xml</se:Format>
                   </se:ExternalGraphic>
                   <!--Well known marker fallback-->
@@ -193,12 +193,12 @@
             <se:Graphic>
               <!--Parametric SVG-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="C:/OSGEO4~1/apps/qgis/svg/religion/place_of_worship_islamic3.svg?fill=%23000000&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/religion/place_of_worship_islamic3.svg?fill=%23000000&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Plain SVG fallback, no parameters-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="religion/place_of_worship_islamic3.svg" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="religion/place_of_worship_islamic3.svg"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Well known marker fallback-->
