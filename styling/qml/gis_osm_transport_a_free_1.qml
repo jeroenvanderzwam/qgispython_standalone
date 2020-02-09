@@ -1,20 +1,20 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis labelsEnabled="0" simplifyDrawingTol="1" version="3.10.0-A CoruÃ±a" minScale="1e+08" maxScale="0" simplifyMaxScale="1" readOnly="0" hasScaleBasedVisibilityFlag="0" simplifyDrawingHints="1" styleCategories="AllStyleCategories" simplifyAlgorithm="0" simplifyLocal="1">
+<qgis hasScaleBasedVisibilityFlag="0" simplifyDrawingTol="1" styleCategories="AllStyleCategories" simplifyAlgorithm="0" simplifyDrawingHints="1" simplifyLocal="1" minScale="1e+08" readOnly="0" simplifyMaxScale="1" version="3.10.0-A Coruña" maxScale="0" labelsEnabled="0">
   <flags>
     <Identifiable>1</Identifiable>
     <Removable>1</Removable>
     <Searchable>1</Searchable>
   </flags>
-  <renderer-v2 enableorderby="0" attr="fclass" type="categorizedSymbol" forceraster="0" symbollevels="0">
+  <renderer-v2 symbollevels="0" attr="fclass" type="categorizedSymbol" forceraster="0" enableorderby="0">
     <categories>
-      <category symbol="0" label="bus_station" value="bus_station" render="true"/>
-      <category symbol="1" label="taxi" value="taxi" render="true"/>
+      <category render="true" value="bus_station" label="bus_station" symbol="0"/>
+      <category render="true" value="taxi" label="taxi" symbol="1"/>
     </categories>
     <symbols>
-      <symbol force_rhr="0" type="fill" clip_to_extent="1" alpha="1" name="0">
-        <layer pass="0" class="CentroidFill" enabled="1" locked="0">
-          <prop v="1" k="point_on_all_parts"/>
-          <prop v="0" k="point_on_surface"/>
+      <symbol clip_to_extent="1" type="fill" force_rhr="0" alpha="1" name="0">
+        <layer pass="0" enabled="1" class="CentroidFill" locked="0">
+          <prop k="point_on_all_parts" v="1"/>
+          <prop k="point_on_surface" v="0"/>
           <data_defined_properties>
             <Option type="Map">
               <Option type="QString" value="" name="name"/>
@@ -22,26 +22,26 @@
               <Option type="QString" value="collection" name="type"/>
             </Option>
           </data_defined_properties>
-          <symbol force_rhr="0" type="marker" clip_to_extent="1" alpha="1" name="@0@0">
-            <layer pass="0" class="SimpleMarker" enabled="1" locked="0">
-              <prop v="0" k="angle"/>
-              <prop v="0,146,218,255" k="color"/>
-              <prop v="1" k="horizontal_anchor_point"/>
-              <prop v="round" k="joinstyle"/>
-              <prop v="square" k="name"/>
-              <prop v="0,0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="35,35,35,255" k="outline_color"/>
-              <prop v="no" k="outline_style"/>
-              <prop v="0" k="outline_width"/>
-              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-              <prop v="MM" k="outline_width_unit"/>
-              <prop v="diameter" k="scale_method"/>
-              <prop v="4.5" k="size"/>
-              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-              <prop v="MapUnit" k="size_unit"/>
-              <prop v="1" k="vertical_anchor_point"/>
+          <symbol clip_to_extent="1" type="marker" force_rhr="0" alpha="1" name="@0@0">
+            <layer pass="0" enabled="1" class="SimpleMarker" locked="0">
+              <prop k="angle" v="0"/>
+              <prop k="color" v="0,146,218,255"/>
+              <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="round"/>
+              <prop k="name" v="square"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="no"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="diameter"/>
+              <prop k="size" v="4.5"/>
+              <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="size_unit" v="MapUnit"/>
+              <prop k="vertical_anchor_point" v="1"/>
               <data_defined_properties>
                 <Option type="Map">
                   <Option type="QString" value="" name="name"/>
@@ -52,9 +52,9 @@
             </layer>
           </symbol>
         </layer>
-        <layer pass="0" class="CentroidFill" enabled="1" locked="0">
-          <prop v="1" k="point_on_all_parts"/>
-          <prop v="0" k="point_on_surface"/>
+        <layer pass="0" enabled="1" class="CentroidFill" locked="0">
+          <prop k="point_on_all_parts" v="1"/>
+          <prop k="point_on_surface" v="0"/>
           <data_defined_properties>
             <Option type="Map">
               <Option type="QString" value="" name="name"/>
@@ -62,25 +62,25 @@
               <Option type="QString" value="collection" name="type"/>
             </Option>
           </data_defined_properties>
-          <symbol force_rhr="0" type="marker" clip_to_extent="1" alpha="1" name="@0@1">
-            <layer pass="0" class="SvgMarker" enabled="1" locked="0">
-              <prop v="0" k="angle"/>
-              <prop v="255,255,255,255" k="color"/>
-              <prop v="0" k="fixedAspectRatio"/>
-              <prop v="1" k="horizontal_anchor_point"/>
-              <prop v="transport/transport_bus_stop.svg" k="name"/>
-              <prop v="0,0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="35,35,35,255" k="outline_color"/>
-              <prop v="0" k="outline_width"/>
-              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-              <prop v="MM" k="outline_width_unit"/>
-              <prop v="diameter" k="scale_method"/>
-              <prop v="4" k="size"/>
-              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-              <prop v="MapUnit" k="size_unit"/>
-              <prop v="1" k="vertical_anchor_point"/>
+          <symbol clip_to_extent="1" type="marker" force_rhr="0" alpha="1" name="@0@1">
+            <layer pass="0" enabled="1" class="SvgMarker" locked="0">
+              <prop k="angle" v="0"/>
+              <prop k="color" v="255,255,255,255"/>
+              <prop k="fixedAspectRatio" v="0"/>
+              <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="name" v="transport/transport_bus_stop.svg"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="diameter"/>
+              <prop k="size" v="4"/>
+              <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="size_unit" v="MapUnit"/>
+              <prop k="vertical_anchor_point" v="1"/>
               <data_defined_properties>
                 <Option type="Map">
                   <Option type="QString" value="" name="name"/>
@@ -92,19 +92,19 @@
           </symbol>
         </layer>
       </symbol>
-      <symbol force_rhr="0" type="fill" clip_to_extent="1" alpha="1" name="1">
-        <layer pass="0" class="SimpleFill" enabled="1" locked="0">
-          <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
-          <prop v="238,238,238,255" k="color"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="220,207,205,255" k="outline_color"/>
-          <prop v="solid" k="outline_style"/>
-          <prop v="0.66" k="outline_width"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="solid" k="style"/>
+      <symbol clip_to_extent="1" type="fill" force_rhr="0" alpha="1" name="1">
+        <layer pass="0" enabled="1" class="SimpleFill" locked="0">
+          <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="color" v="238,238,238,255"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="220,207,205,255"/>
+          <prop k="outline_style" v="solid"/>
+          <prop k="outline_width" v="0.66"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="style" v="solid"/>
           <data_defined_properties>
             <Option type="Map">
               <Option type="QString" value="" name="name"/>
@@ -113,9 +113,9 @@
             </Option>
           </data_defined_properties>
         </layer>
-        <layer pass="0" class="CentroidFill" enabled="1" locked="0">
-          <prop v="1" k="point_on_all_parts"/>
-          <prop v="0" k="point_on_surface"/>
+        <layer pass="0" enabled="1" class="CentroidFill" locked="0">
+          <prop k="point_on_all_parts" v="1"/>
+          <prop k="point_on_surface" v="0"/>
           <data_defined_properties>
             <Option type="Map">
               <Option type="QString" value="" name="name"/>
@@ -123,25 +123,25 @@
               <Option type="QString" value="collection" name="type"/>
             </Option>
           </data_defined_properties>
-          <symbol force_rhr="0" type="marker" clip_to_extent="1" alpha="1" name="@1@1">
-            <layer pass="0" class="SvgMarker" enabled="1" locked="0">
-              <prop v="0" k="angle"/>
-              <prop v="0,146,218,255" k="color"/>
-              <prop v="0" k="fixedAspectRatio"/>
-              <prop v="1" k="horizontal_anchor_point"/>
-              <prop v="transport/amenity=taxi.svg" k="name"/>
-              <prop v="0,0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="35,35,35,255" k="outline_color"/>
-              <prop v="0" k="outline_width"/>
-              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-              <prop v="MM" k="outline_width_unit"/>
-              <prop v="diameter" k="scale_method"/>
-              <prop v="4" k="size"/>
-              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-              <prop v="MapUnit" k="size_unit"/>
-              <prop v="1" k="vertical_anchor_point"/>
+          <symbol clip_to_extent="1" type="marker" force_rhr="0" alpha="1" name="@1@1">
+            <layer pass="0" enabled="1" class="SvgMarker" locked="0">
+              <prop k="angle" v="0"/>
+              <prop k="color" v="0,146,218,255"/>
+              <prop k="fixedAspectRatio" v="0"/>
+              <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="name" v="transport/amenity=taxi.svg"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="diameter"/>
+              <prop k="size" v="4"/>
+              <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="size_unit" v="MapUnit"/>
+              <prop k="vertical_anchor_point" v="1"/>
               <data_defined_properties>
                 <Option type="Map">
                   <Option type="QString" value="" name="name"/>
@@ -155,19 +155,19 @@
       </symbol>
     </symbols>
     <source-symbol>
-      <symbol force_rhr="0" type="fill" clip_to_extent="1" alpha="1" name="0">
-        <layer pass="0" class="SimpleFill" enabled="1" locked="0">
-          <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
-          <prop v="145,82,45,255" k="color"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="35,35,35,255" k="outline_color"/>
-          <prop v="solid" k="outline_style"/>
-          <prop v="0.26" k="outline_width"/>
-          <prop v="MM" k="outline_width_unit"/>
-          <prop v="solid" k="style"/>
+      <symbol clip_to_extent="1" type="fill" force_rhr="0" alpha="1" name="0">
+        <layer pass="0" enabled="1" class="SimpleFill" locked="0">
+          <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="color" v="145,82,45,255"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="35,35,35,255"/>
+          <prop k="outline_style" v="solid"/>
+          <prop k="outline_width" v="0.26"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="style" v="solid"/>
           <data_defined_properties>
             <Option type="Map">
               <Option type="QString" value="" name="name"/>
@@ -182,8 +182,8 @@
     <sizescale/>
   </renderer-v2>
   <customproperties>
-    <property value="name" key="dualview/previewExpressions"/>
-    <property value="0" key="embeddedWidgets/count"/>
+    <property key="dualview/previewExpressions" value="name"/>
+    <property key="embeddedWidgets/count" value="0"/>
     <property key="variableNames"/>
     <property key="variableValues"/>
   </customproperties>
@@ -191,12 +191,12 @@
   <featureBlendMode>0</featureBlendMode>
   <layerOpacity>1</layerOpacity>
   <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
-    <DiagramCategory scaleDependency="Area" minimumSize="0" enabled="0" diagramOrientation="Up" sizeType="MM" height="15" width="15" backgroundColor="#ffffff" minScaleDenominator="0" penAlpha="255" opacity="1" sizeScale="3x:0,0,0,0,0,0" barWidth="5" penColor="#000000" backgroundAlpha="255" labelPlacementMethod="XHeight" lineSizeType="MM" maxScaleDenominator="1e+08" penWidth="0" rotationOffset="270" lineSizeScale="3x:0,0,0,0,0,0" scaleBasedVisibility="0">
-      <fontProperties style="" description="MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0"/>
-      <attribute label="" color="#000000" field=""/>
+    <DiagramCategory diagramOrientation="Up" maxScaleDenominator="1e+08" height="15" scaleBasedVisibility="0" barWidth="5" labelPlacementMethod="XHeight" minScaleDenominator="0" enabled="0" minimumSize="0" penColor="#000000" penWidth="0" backgroundAlpha="255" lineSizeType="MM" width="15" opacity="1" scaleDependency="Area" rotationOffset="270" lineSizeScale="3x:0,0,0,0,0,0" backgroundColor="#ffffff" sizeType="MM" sizeScale="3x:0,0,0,0,0,0" penAlpha="255">
+      <fontProperties description="MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0" style=""/>
+      <attribute field="" label="" color="#000000"/>
     </DiagramCategory>
   </SingleCategoryDiagramRenderer>
-  <DiagramLayerSettings obstacle="0" linePlacementFlags="18" zIndex="0" dist="0" showAll="1" placement="1" priority="0">
+  <DiagramLayerSettings dist="0" obstacle="0" linePlacementFlags="18" priority="0" showAll="1" placement="1" zIndex="0">
     <properties>
       <Option type="Map">
         <Option type="QString" value="" name="name"/>
@@ -247,47 +247,47 @@
     </field>
   </fieldConfiguration>
   <aliases>
-    <alias index="0" name="" field="fid"/>
-    <alias index="1" name="" field="osm_id"/>
-    <alias index="2" name="" field="code"/>
-    <alias index="3" name="" field="fclass"/>
-    <alias index="4" name="" field="name"/>
+    <alias field="fid" index="0" name=""/>
+    <alias field="osm_id" index="1" name=""/>
+    <alias field="code" index="2" name=""/>
+    <alias field="fclass" index="3" name=""/>
+    <alias field="name" index="4" name=""/>
   </aliases>
   <excludeAttributesWMS/>
   <excludeAttributesWFS/>
   <defaults>
-    <default expression="" field="fid" applyOnUpdate="0"/>
-    <default expression="" field="osm_id" applyOnUpdate="0"/>
-    <default expression="" field="code" applyOnUpdate="0"/>
-    <default expression="" field="fclass" applyOnUpdate="0"/>
-    <default expression="" field="name" applyOnUpdate="0"/>
+    <default field="fid" applyOnUpdate="0" expression=""/>
+    <default field="osm_id" applyOnUpdate="0" expression=""/>
+    <default field="code" applyOnUpdate="0" expression=""/>
+    <default field="fclass" applyOnUpdate="0" expression=""/>
+    <default field="name" applyOnUpdate="0" expression=""/>
   </defaults>
   <constraints>
-    <constraint constraints="3" unique_strength="1" field="fid" notnull_strength="1" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" field="osm_id" notnull_strength="0" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" field="code" notnull_strength="0" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" field="fclass" notnull_strength="0" exp_strength="0"/>
-    <constraint constraints="0" unique_strength="0" field="name" notnull_strength="0" exp_strength="0"/>
+    <constraint exp_strength="0" field="fid" notnull_strength="1" unique_strength="1" constraints="3"/>
+    <constraint exp_strength="0" field="osm_id" notnull_strength="0" unique_strength="0" constraints="0"/>
+    <constraint exp_strength="0" field="code" notnull_strength="0" unique_strength="0" constraints="0"/>
+    <constraint exp_strength="0" field="fclass" notnull_strength="0" unique_strength="0" constraints="0"/>
+    <constraint exp_strength="0" field="name" notnull_strength="0" unique_strength="0" constraints="0"/>
   </constraints>
   <constraintExpressions>
-    <constraint field="fid" desc="" exp=""/>
-    <constraint field="osm_id" desc="" exp=""/>
-    <constraint field="code" desc="" exp=""/>
-    <constraint field="fclass" desc="" exp=""/>
-    <constraint field="name" desc="" exp=""/>
+    <constraint field="fid" exp="" desc=""/>
+    <constraint field="osm_id" exp="" desc=""/>
+    <constraint field="code" exp="" desc=""/>
+    <constraint field="fclass" exp="" desc=""/>
+    <constraint field="name" exp="" desc=""/>
   </constraintExpressions>
   <expressionfields/>
   <attributeactions>
-    <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+    <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
   </attributeactions>
-  <attributetableconfig sortOrder="1" sortExpression="&quot;fclass&quot;" actionWidgetStyle="dropDown">
+  <attributetableconfig sortExpression="&quot;fclass&quot;" actionWidgetStyle="dropDown" sortOrder="1">
     <columns>
-      <column type="field" hidden="0" name="osm_id" width="-1"/>
-      <column type="field" hidden="0" name="code" width="-1"/>
-      <column type="field" hidden="0" name="fclass" width="-1"/>
-      <column type="field" hidden="0" name="name" width="217"/>
-      <column type="actions" hidden="1" width="-1"/>
-      <column type="field" hidden="0" name="fid" width="-1"/>
+      <column hidden="0" type="field" width="-1" name="osm_id"/>
+      <column hidden="0" type="field" width="-1" name="code"/>
+      <column hidden="0" type="field" width="-1" name="fclass"/>
+      <column hidden="0" type="field" width="217" name="name"/>
+      <column hidden="1" type="actions" width="-1"/>
+      <column hidden="0" type="field" width="-1" name="fid"/>
     </columns>
   </attributetableconfig>
   <conditionalstyles>
@@ -326,11 +326,11 @@ def my_form_open(dialog, layer, feature):
     <field editable="1" name="osm_id"/>
   </editable>
   <labelOnTop>
-    <field labelOnTop="0" name="code"/>
-    <field labelOnTop="0" name="fclass"/>
-    <field labelOnTop="0" name="fid"/>
-    <field labelOnTop="0" name="name"/>
-    <field labelOnTop="0" name="osm_id"/>
+    <field name="code" labelOnTop="0"/>
+    <field name="fclass" labelOnTop="0"/>
+    <field name="fid" labelOnTop="0"/>
+    <field name="name" labelOnTop="0"/>
+    <field name="osm_id" labelOnTop="0"/>
   </labelOnTop>
   <widgets/>
   <previewExpression>name</previewExpression>

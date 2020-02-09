@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:se="http://www.opengis.net/se" version="1.1.0" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:se="http://www.opengis.net/se" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ogc="http://www.opengis.net/ogc" version="1.1.0" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd">
   <NamedLayer>
     <se:Name>gis_osm_traffic_free_1</se:Name>
     <UserStyle>
@@ -80,12 +80,12 @@
             <se:Graphic>
               <!--Parametric SVG-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="C:/OSGEO4~1/apps/qgis/svg/transport/transport_fuel.svg?fill=%230092da&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/transport/transport_fuel.svg?fill=%230092da&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Plain SVG fallback, no parameters-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="transport/transport_fuel.svg" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="transport/transport_fuel.svg"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Well known marker fallback-->
@@ -252,12 +252,12 @@
             <se:Graphic>
               <!--Parametric SVG-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="C:/OSGEO4~1/apps/qgis/svg/transport/transport_parking.svg?fill=%230092da&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/transport/transport_parking.svg?fill=%230092da&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Plain SVG fallback, no parameters-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="transport/transport_parking.svg" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="transport/transport_parking.svg"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Well known marker fallback-->
@@ -292,12 +292,12 @@
             <se:Graphic>
               <!--Parametric SVG-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="C:/OSGEO4~1/apps/qgis/svg/transport/transport_parking_bicycle.svg?fill=%230092da&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/transport/transport_parking_bicycle.svg?fill=%230092da&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Plain SVG fallback, no parameters-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="transport/transport_parking_bicycle.svg" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="transport/transport_parking_bicycle.svg"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Well known marker fallback-->
@@ -332,12 +332,12 @@
             <se:Graphic>
               <!--Parametric SVG-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="C:/OSGEO4~1/apps/qgis/svg/transport/transport_parking_car.svg?fill=%230092da&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/transport/transport_parking_car.svg?fill=%230092da&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Plain SVG fallback, no parameters-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="transport/transport_parking_car.svg" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="transport/transport_parking_car.svg"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Well known marker fallback-->
@@ -372,12 +372,12 @@
             <se:Graphic>
               <!--Parametric SVG-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="C:/OSGEO4~1/apps/qgis/svg/transport/transport_parking_private.svg?fill=%230092da&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/transport/transport_parking_private.svg?fill=%230092da&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Plain SVG fallback, no parameters-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="transport/transport_parking_private.svg" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="transport/transport_parking_private.svg"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Well known marker fallback-->
@@ -441,12 +441,12 @@
             <se:Graphic>
               <!--Parametric SVG-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="C:/OSGEO4~1/apps/qgis/svg/transport/amenity=ferry_terminal.svg?fill=%230092da&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/transport/amenity=ferry_terminal.svg?fill=%230092da&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Plain SVG fallback, no parameters-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="transport/amenity=ferry_terminal.svg" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="transport/amenity=ferry_terminal.svg"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Well known marker fallback-->
@@ -481,12 +481,12 @@
             <se:Graphic>
               <!--Parametric SVG-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="C:/OSGEO4~1/apps/qgis/svg/shopping/shopping_photo.svg?fill=%230092da&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/shopping/shopping_photo.svg?fill=%230092da&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Plain SVG fallback, no parameters-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="shopping/shopping_photo.svg" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="shopping/shopping_photo.svg"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Well known marker fallback-->
@@ -521,12 +521,12 @@
             <se:Graphic>
               <!--Parametric SVG-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="C:/OSGEO4~1/apps/qgis/svg/backgrounds/background_octogon.svg?fill=%23b54c4c&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/backgrounds/background_octogon.svg?fill=%23b54c4c&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Plain SVG fallback, no parameters-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="backgrounds/background_octogon.svg" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="backgrounds/background_octogon.svg"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Well known marker fallback-->
@@ -591,12 +591,12 @@
             <se:Graphic>
               <!--Parametric SVG-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="C:/OSGEO4~1/apps/qgis/svg/transport/transport_traffic_lights.svg?fill=%23686868&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="C:/OSGEO4~1/apps/qgis/svg/transport/transport_traffic_lights.svg?fill=%23686868&amp;fill-opacity=1&amp;outline=%23232323&amp;outline-opacity=1&amp;outline-width=0"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Plain SVG fallback, no parameters-->
               <se:ExternalGraphic>
-                <se:OnlineResource xlink:href="transport/transport_traffic_lights.svg" xlink:type="simple"/>
+                <se:OnlineResource xlink:type="simple" xlink:href="transport/transport_traffic_lights.svg"/>
                 <se:Format>image/svg+xml</se:Format>
               </se:ExternalGraphic>
               <!--Well known marker fallback-->
