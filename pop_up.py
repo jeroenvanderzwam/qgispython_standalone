@@ -6,6 +6,7 @@ import processing
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from qgis.core import *
+from qgis.utils import *
 
 class Ui_Pop_Up(QtWidgets.QDialog):
     def __init__(self, parent, provincie):
@@ -91,16 +92,42 @@ class Ui_Pop_Up(QtWidgets.QDialog):
         self.Pop_Up.reject()
 
         # downloaden van de zipfile
-        shapes = []
+        
         zip_, headers = urllib.request.urlretrieve(f'http://download.geofabrik.de/europe/netherlands/{self.provincie.lower()}-latest-free.shp.zip')
         with zipfile.ZipFile(zip_) as zf:
             bestanden = zf.namelist()
             for bestand in bestanden:
-                file_pad = os.path.join(self.lineEdit.text(), bestand)
-                if os.path.splitext(file_pad)[1] == '.shp':
-                    shapes.append(file_pad)
+                file_pad = os.path.join(self.lineEdit.text(), bestand) 
                 with open(file_pad, 'wb') as f:
                     f.write(zf.read(bestand))
+        
+        shapes = []
+        for bestand in os.listdir(self.lineEdit.text()):
+            file_pad = os.path.join(self.lineEdit.text(), bestand)
+            if os.path.splitext(file_pad)[1] == '.shp':        
+                pad, bestand = os.path.split(file_pad)
+                
+                laag = QgsVectorLayer(file_pad, 'temp','ogr')
+
+                # Punten
+                if laag.wkbType() == 1:
+                    shape = os.path.join(pad, '1_' + bestand)
+                    QgsVectorFileWriter.writeAsVectorFormat(laag, shape,'utf-8',driverName='ESRI Shapefile')
+                    del laag
+                    QgsVectorFileWriter.deleteShapeFile(file_pad)
+                # Lijnen
+                elif laag.wkbType() == 5:
+                    shape = os.path.join(pad, '2_' + bestand)
+                    QgsVectorFileWriter.writeAsVectorFormat(laag, shape,'utf-8',driverName='ESRI Shapefile')
+                    del laag
+                    QgsVectorFileWriter.deleteShapeFile(file_pad)
+                # Polygonen
+                elif laag.wkbType() == 6:
+                    shape = os.path.join(pad, '3_' + bestand)
+                    QgsVectorFileWriter.writeAsVectorFormat(laag, shape,'utf-8',driverName='ESRI Shapefile')
+                    del laag
+                    QgsVectorFileWriter.deleteShapeFile(file_pad)
+                shapes.append(shape)
 
         # Shapefiles omzetten naar gpkg
         processing.run("native:package", 
@@ -119,7 +146,7 @@ class Ui_Pop_Up(QtWidgets.QDialog):
 
         style_laag.commitChanges()
 
-        QgsProject.instance().addMapLayer(style_laag)
+        
 
 if __name__ == "__main__":
     import sys
