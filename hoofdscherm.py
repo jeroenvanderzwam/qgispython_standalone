@@ -67,7 +67,7 @@ class Hoofdscherm(QMainWindow):
         self.pan_action = QAction(
             QIcon(":/osm/pan"),
             "Pan",
-            self)
+            self) 
         # Setup action for ZoomIn tool
         self.zoomIn_action = QAction(
             QIcon(":/osm/ZoomIn"),
