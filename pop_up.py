@@ -5,6 +5,7 @@ import os
 import processing
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from qgis.core import *
 
 class Ui_Pop_Up(QtWidgets.QDialog):
     def __init__(self, parent, provincie):
@@ -78,9 +79,18 @@ class Ui_Pop_Up(QtWidgets.QDialog):
         file = str(QtWidgets.QFileDialog.getExistingDirectory(self.Pop_Up, "Select Directory"))
         self.lineEdit.setText(file)
 
+    def read_style(self, type, naam):
+        try:
+            pad = f'styling/{type}'
+            with open(pad + '/' + naam + f'.{type}', 'r') as f:
+                return f.read()
+        except FileNotFoundError:
+            return ''
+
     def download_files(self):
         self.Pop_Up.reject()
 
+        # downloaden van de zipfile
         shapes = []
         zip_, headers = urllib.request.urlretrieve(f'http://download.geofabrik.de/europe/netherlands/{self.provincie.lower()}-latest-free.shp.zip')
         with zipfile.ZipFile(zip_) as zf:
@@ -92,11 +102,24 @@ class Ui_Pop_Up(QtWidgets.QDialog):
                 with open(file_pad, 'wb') as f:
                     f.write(zf.read(bestand))
 
+        # Shapefiles omzetten naar gpkg
         processing.run("native:package", 
                         {'LAYERS': shapes,
                         'OUTPUT':os.path.join(self.lineEdit.text(), f'{self.provincie}.gpkg'),
                         'OVERWRITE':False})
+        
+        # Mooie styling van Peter meegeven
+        style_laag = QgsVectorLayer(f"{os.path.join(self.lineEdit.text(), self.provincie)}.gpkg|layername=layer_styles","style","ogr")
 
+        style_laag.startEditing()
+        for elem in style_laag.getFeatures():  
+            if elem.attributes()[3] != NULL:
+                style_laag.changeAttributeValue(elem.id(), 6, self.read_style('qml', elem.attributes()[3]))
+                style_laag.changeAttributeValue(elem.id(), 7, self.read_style('sld', elem.attributes()[3]))
+
+        style_laag.commitChanges()
+
+        QgsProject.instance().addMapLayer(style_laag)
 
 if __name__ == "__main__":
     import sys
