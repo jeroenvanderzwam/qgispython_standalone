@@ -34,8 +34,6 @@ class Hoofdscherm(QMainWindow):
             gpkg_layer = path_to_gpkg + "|layername=" + layer
 
             vlaag = QgsVectorLayer(gpkg_layer, layer, "ogr")
-            vlaag.setProviderEncoding(u'UTF-16')
-            vlaag.dataProvider().setEncoding(u'UTF-16')
 
             if not vlaag.isValid():
                 print("Layer failed to load!")

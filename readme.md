@@ -23,6 +23,6 @@
 
     set GDAL_DATA=%OSGEO4W_ROOT%\share\gdal
 
-#### Nadat je deze commandas in de cmd hebt uitgevoerd zal python3 nu verwijzen naar de juiste python (binnen qgis) nu zou je met
+#### Nadat je deze commandos in de cmd hebt uitgevoerd zal python3 nu verwijzen naar de juiste python (binnen qgis) nu zou je met
     python3 osm_downloader.py 
 #### de applicatie kunnen starten.
