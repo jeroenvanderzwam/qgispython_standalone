@@ -110,8 +110,6 @@ class Hoofdscherm(QMainWindow):
             self.nd = Ui_Pop_Up(self, provincie)
             self.nd.setupUi(self.Pop_Up)
             self.Pop_Up.show()
-            
-            
         else:
             print ("Geen provincie aangeklikt.")
         

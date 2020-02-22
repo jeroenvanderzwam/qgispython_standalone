@@ -1,6 +1,9 @@
 import urllib.request
 import zipfile
 import os
+import shutil
+import time
+import signal
 
 import processing
 
@@ -12,6 +15,17 @@ class Ui_Pop_Up(QtWidgets.QDialog):
     def __init__(self, parent, provincie):
         self.provincie = provincie
         super(Ui_Pop_Up, self).__init__()
+
+    def __del__(self):
+        temp_path = os.getcwd() + "\\temp"
+        while True:
+            try:
+                if os.path.isdir(temp_path):
+                    shutil.rmtree(temp_path)
+            except WindowsError:
+                time.sleep(2)
+            else:
+                break
         
     def setupUi(self, Pop_Up):
         self.Pop_Up = Pop_Up
@@ -91,42 +105,38 @@ class Ui_Pop_Up(QtWidgets.QDialog):
     def download_files(self):
         self.Pop_Up.reject()
 
-        # downloaden van de zipfile
+        # maken van temp folder
+        temp_path = os.getcwd() + "\\temp"
+        if not os.path.isdir(temp_path): 
+            os.mkdir(temp_path)
         
-        zip_, headers = urllib.request.urlretrieve(f'http://download.geofabrik.de/europe/netherlands/{self.provincie.lower()}-latest-free.shp.zip')
+        # downloaden van de zipfile
+        zip_, _ = urllib.request.urlretrieve(f'http://download.geofabrik.de/europe/netherlands/{self.provincie.lower()}-latest-free.shp.zip')
         with zipfile.ZipFile(zip_) as zf:
             bestanden = zf.namelist()
             for bestand in bestanden:
-                file_pad = os.path.join(self.lineEdit.text(), bestand) 
+                file_pad = os.path.join(temp_path, bestand) 
                 with open(file_pad, 'wb') as f:
                     f.write(zf.read(bestand))
         
         shapes = []
-        for bestand in os.listdir(self.lineEdit.text()):
-            file_pad = os.path.join(self.lineEdit.text(), bestand)
+        for bestand in os.listdir(temp_path):
+            file_pad = os.path.join(temp_path, bestand)
             if os.path.splitext(file_pad)[1] == '.shp':        
                 pad, bestand = os.path.split(file_pad)
                 
                 laag = QgsVectorLayer(file_pad, 'temp','ogr')
-
                 # Punten
                 if laag.wkbType() == 1:
                     shape = os.path.join(pad, '1_' + bestand)
-                    QgsVectorFileWriter.writeAsVectorFormat(laag, shape,'utf-8',driverName='ESRI Shapefile')
-                    del laag
-                    QgsVectorFileWriter.deleteShapeFile(file_pad)
                 # Lijnen
                 elif laag.wkbType() == 5:
                     shape = os.path.join(pad, '2_' + bestand)
-                    QgsVectorFileWriter.writeAsVectorFormat(laag, shape,'utf-8',driverName='ESRI Shapefile')
-                    del laag
-                    QgsVectorFileWriter.deleteShapeFile(file_pad)
                 # Polygonen
                 elif laag.wkbType() == 6:
                     shape = os.path.join(pad, '3_' + bestand)
-                    QgsVectorFileWriter.writeAsVectorFormat(laag, shape,'utf-8',driverName='ESRI Shapefile')
-                    del laag
-                    QgsVectorFileWriter.deleteShapeFile(file_pad)
+
+                writer = QgsVectorFileWriter.writeAsVectorFormat(laag, shape,'utf-8',driverName='ESRI Shapefile')
                 shapes.append(shape)
 
         # Shapefiles omzetten naar gpkg
@@ -134,7 +144,6 @@ class Ui_Pop_Up(QtWidgets.QDialog):
                         {'LAYERS': shapes,
                         'OUTPUT':os.path.join(self.lineEdit.text(), f'{self.provincie}.gpkg'),
                         'OVERWRITE':False})
-        
         # Mooie styling van Peter meegeven
         style_laag = QgsVectorLayer(f"{os.path.join(self.lineEdit.text(), self.provincie)}.gpkg|layername=layer_styles","style","ogr")
 
@@ -146,8 +155,6 @@ class Ui_Pop_Up(QtWidgets.QDialog):
 
         style_laag.commitChanges()
 
-        
-
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
@@ -156,4 +163,3 @@ if __name__ == "__main__":
     ui.setupUi(Pop_Up)
     Pop_Up.show()
     sys.exit(app.exec_())
-
