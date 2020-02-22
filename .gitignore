@@ -1,1 +1,4 @@
 GIS_Data_3857.gpkg
+/utils
+/processing
+/__pycache__
