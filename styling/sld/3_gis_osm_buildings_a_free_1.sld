@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se" version="1.1.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:se="http://www.opengis.net/se" version="1.1.0" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" xmlns:xlink="http://www.w3.org/1999/xlink">
   <NamedLayer>
-    <se:Name>gis_osm_buildings_a_free_1</se:Name>
+    <se:Name>Gelderland 3_gis_osm_buildings_a_free_1</se:Name>
     <UserStyle>
-      <se:Name>gis_osm_buildings_a_free_1</se:Name>
+      <se:Name>Gelderland 3_gis_osm_buildings_a_free_1</se:Name>
       <se:FeatureTypeStyle>
         <se:Rule>
-          <se:Name>Building</se:Name>
-          <se:Description>
-            <se:Title>Building</se:Title>
-          </se:Description>
+          <se:Name>Single symbol</se:Name>
           <se:MinScaleDenominator>0</se:MinScaleDenominator>
           <se:MaxScaleDenominator>20000</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
