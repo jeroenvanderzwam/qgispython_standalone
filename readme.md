@@ -30,9 +30,13 @@ set GDAL_DATA=%OSGEO4W_ROOT%\share\gdal
 #### Nadat je deze commandos in de cmd hebt uitgevoerd zal python3 nu verwijzen naar de juiste python (binnen qgis) nu zou je met. Zorg er hierbij voor dat osm_downloader in je current directory staat
     python3 osm_downloader.py
 
-#### Hierna opent zich een scherm. In deze interface kun je linksboven in op de osm button klikken. Nadat je dat hebt gedaan kun je een provincie naar keuze uitkiezen. Daarna krijg je een extra scherm waarbij je op kunt geven waar je de geopackage wilt plaatsen. Hierna zal de geopackage gedownload worden. Houd er rekening mee dat dit even kan duren.
+#### Hierna opent zich een scherm. In deze interface kun je linksboven in op de osm button klikken. Nadat je dat hebt gedaan kun je een provincie naar keuze uitkiezen. 
 
 ![Image description](https://github.com/jeroenvanderzwam/qgispython_standalone/blob/master/readme_afbeeldingen/hoofdscherm.PNG)
+
+#### Daarna krijg je een extra scherm waarbij je op kunt geven waar je de geopackage wilt plaatsen. Hierna zal de geopackage gedownload worden. Houd er rekening mee dat dit even kan duren.
+
+![Image description](https://github.com/jeroenvanderzwam/qgispython_standalone/blob/master/readme_afbeeldingen/extra_scherm.PNG)
 
 #### Contributors: Peter Schols
 
