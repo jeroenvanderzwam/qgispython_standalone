@@ -27,8 +27,9 @@ set QGIS_PREFIX_PATH=%OSGEO4W_ROOT%\apps\qgis
 set GDAL_DATA=%OSGEO4W_ROOT%\share\gdal
 ```
 
-#### Nadat je deze commandos in de cmd hebt uitgevoerd zal python3 nu verwijzen naar de juiste python (binnen qgis) nu zou je met. Zorg er hierbij voor dat osm_downloader in je current directory staat
+#### Nadat je deze commandos in de cmd hebt uitgevoerd zal python3 nu verwijzen naar de juiste python (binnen qgis) nu zou je met 
     python3 osm_downloader.py
+#### de applicatie kunnen starten. Zorg er hierbij voor dat osm_downloader in je current directory staat.
 
 #### Hierna opent zich een scherm. In deze interface kun je linksboven in op de osm button klikken. Nadat je dat hebt gedaan kun je een provincie naar keuze uitkiezen. 
 
